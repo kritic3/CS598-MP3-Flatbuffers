@@ -1,2 +1,15 @@
 // Schema for dataframe encoding.
 // Your code here...
+namespace DataFrame;
+
+table ColumnMetadata {
+    name: string;
+    data_type: string; // Data type of the column (e.g., int64, float64, string)
+}
+
+table DataFrame {
+    metadata: string; // Metadata placeholder
+    columns: [ColumnMetadata]; // Metadata for each column
+}
+
+root_type DataFrame;
